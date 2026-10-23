@@ -1,6 +1,6 @@
-<html class="js backgroundsize borderimage csstransitions fontface svg" dir="ltr" lang="en"> <!--require the page language-->
+<html class="js backgroundsize borderimage csstransitions fontface svg" dir="ltr" lang="en"> <!-- [Hye Ran Yoo - 1] require the page language-->
 <head>
-	<title>Home page | Hi/Max Real Estate</title> <!--put the page describe | site title -->
+	<title>Home page | Hi/Max Real Estate</title> <!-- [Hye Ran Yoo - 2] put the page describe | site title -->
 	<script src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_1_0/wet-boew/js/i18n/en.min.js"></script>
 	<script
 		src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_1_0/wet-boew/js/deps/jsonpointer.min.js"></script>
@@ -28,7 +28,7 @@
 <body>
 
 	</div>
-	<header> <!-- start of header--> <!-- This area is header, so it use the header tag instead of div -->
+	<header> <!-- start of header--> <!-- [Hye Ran Yoo - 3] This area is header, so it use the header tag instead of div -->
 
 				<div class="app-bar">
 			<div class="container">
@@ -44,7 +44,7 @@
 
 		<nav aria-label="site menu linked" id="wb-sm" data-ajax-replace="../ajax/cdtsMenu-en.html" data-trgt="mb-pnl"
 			class="wb-menu visible-md visible-lg wb-init wb-data-ajax-replace-inited wb-menu-inited wb-navcurr-inited"
-			typeof="SiteNavigationElement"> <!-- This area is navigation landmark role, so it need to change div to nav, aria-label indicate the this navigation's discribe -->
+			typeof="SiteNavigationElement"> <!-- [Hye Ran Yoo - 4] This area is navigation landmark role, so it need to change div to nav, aria-label indicate the this navigation's describe -->
 			<div class="pnl-strt container nvbar">
 				<h2>Topics menu</h2>
 				<div class="row">
@@ -70,29 +70,113 @@
 
 	<main property="mainContentOfPage" class="container">
 		<h1>Welcome</h1>
-		<p>Content A here</p>
+		<!-- [Hye Ran Yoo - 5] 
+		I put the below code from content A on the lab6 document.Also, the "&" change to special letter as "&amp;".
+		This page has alread h1 on the top of this area, so I wrote the h2 tag.
+		Secont sentens needs "p" tag.
+		The link part need link "a" tag.
+		-->
+		<h2>Hi/Max Real Estate &amp; Houses</h2>
+		<p>
+			Buying or selling a home is likely the largest and most important transaction you’ll ever make. That’s why so many trust Hi/MAX Real Estate, which according to Canadian consumers, has been voted #1 Most Trusted Real Estate Agents in Canada six times in a row.
+		</p>
+		<a href="http://www.google.ca">Lets get started</a>
+		
 		<div class="row">
-			<aside class="col-md-4 pull-right"> <!-- This position can use related resource of Content A. It use aside tag instead of div -->
-				<p></p>Content B here
+			<aside class="col-md-4 pull-right"> <!-- [Hye Ran Yoo - 6] This position can use related resource of Content A. It use aside tag instead of div -->
+				<p></p>
+				<!-- [Hye Ran Yoo - 7] 
+				This header also h2 because upper header is h1. 
+				"&" changed to special letter "&amp;".
+				These list is no required list, so I use "ul" tag instead of "ol". 
+				-->
+				<h2>Related resources</h2>
+				<p>It's time to sell and find the next "one". Let us help you navigate the ins &amp; outs of your next move.</p>
+				<ul>
+					<li><a href="http://www.google.ca">Looking for an upgrade?</a></li>
+					<li><a href="http://www.google.ca">Buying tips</a></li>
+					<li><a href="http://www.google.ca">How much is your current home worth?</a></li>
+				</ul>
 			</aside>
 			<div class="col-md-8">
-				<p>Content C here</p>
-
-
+				<!-- [Hye Ran Yoo - 8]  I put the section tag, because section mean to group same topic -->
+				<section>
+					<h2>Why choosing HI/Max</h2>
+					<p>Hi/Max agents go above and beyond and always strive to be the best they can be. HI/MAX is extremely community focused, and our agents are too!</p>
+					<!-- [Hye Ran Yoo - 9] 
+					The table include multiple header needs ids, headers. Aa that attributes, each cell recognize related headers. 
+					Also, table need table's description using caption tag.
+					As using style attributes, this table can distingush header parts and data pars in the table.
+					For contast color, I add the clear against color with foregrand and background on the header parts (Contrast values 9.86 : 1).
+					I put mor about the style sheet, because original cell was narrow, so I can't see the text.
+					-->
+					<table>
+						<caption>Stats of HI/Max</caption>
+						<thead>
+							<tr style="background-color: #444343;color:#ffffff;border-bottom:1px solid #ffffff">
+								<th id="a1" rowspan="2" style="width:60px">Year</th>
+								<th id="a2" colspan="2" style="width:150px">Sold Properties</th>
+								<th id="a4" colspan="2" style="width:180px">Average selling price</th>
+							</tr>
+							<tr style="background-color: #444343;color:#ffffff">
+								<th id="b2" headers="a2">Quebec</th>
+								<th id="b3" headers="a2">Ontario</th>
+								<th id="b4" headers="a4">Single house</th>
+								<th id="b5" headers="a4">Condo</th>
+							</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<th id="y1" headers="a1">2021</th>
+							<td headers="y1 b2 a2">50</td>
+							<td headers="y1 b3 a2">100</td>
+							<td headers="y1 b4 a4">$500,00</td>
+							<td  headers="y1 b5 a4">189,000</td>
+						</tr>
+						<tr>
+							<th id="y2" headers="a1">2022</th>
+							<td headers="y2 b2 a2">100</td>
+							<td headers="y2 b3 a2">200</td>
+							<td headers="y2 b4 a4">$780,00</td>
+							<td headers="y2 b5 a4">240,000</td>
+						</tr>
+						</tbody>
+					</table>
+				</section>
 			</div>
 		</div>
 		<div class="clear"></div>
-		<div>Content D here</div>
+		<div><h2>More Resources on How to Choose the Right Agent</h2><!-- [Hye Ran Yoo - 10]  It changed to the sentence provided in the lab6 documents using h2 tag --></div>
 		<div class="row">
 			<div class="col-md-4 ">
-				<p>Content F here</p>
+				<!-- [Hye Ran Yoo - 11] 
+				I applied the "article" tag because this block is independent.
+				Also, the reason "h3" header is used is this header belong to the above sentence applied "h2".
+				I describe the image using "alt" attribute.
+				-->
+				<article>
+					<p><img src="./1.png" style="width:90%" alt="The tree has the small wood house made of wood with panel written 'For Sale'"></p>
+					<h3><a href="https://www.google.ca/">What Are The Risks of Selling a Home Yourself?</a></h3>
+					<p>We’ve all seen the videos, read the stories, and gasped at the images of people who thought they could conquer a project that would have been better left to the professionals.</p>
+					<p>Read more</p>
+				</article>
 			</div>
 			<div class="col-md-4">
-				<p>Content G here</p>
+				<!-- [Hye Ran Yoo - 12] This block structure is similar to above block. -->
+				<article>
+					<p><img src="./2.png" style="width:90%" alt="The agent is consulting with one customer"></p>
+					<h3><a href="https://www.google.ca/">7 Questions to Ask a Real Estate Agent Before You Commit</a></h3>
+					<p>According to research by the National Association of Realtors, there are considerable benefits to working with a real estate agent, including higher sale prices.</p>
+				</article>
 
 			</div>
 			<div class="col-md-4">
-				<p>Content H here</p>
+				<!-- [Hye Ran Yoo - 13] This block structure is similar to above block. -->
+				<article>
+					<p><img src="./3.png" style="width:90%" alt="The realtor is hanging the sign written 'For Sale'"></p>
+					<h3><a href="https://www.google.ca/">8 Reasons to Hire an Agent When Selling Your Home</a></h3>
+					<p>With all the many different moving parts involved in selling your home, here are eight very valid reasons to have a real estate agent on speed dial.</p>
+				</article>
 
 			</div>
 		</div>
@@ -105,17 +189,17 @@
 
 
 	</main>
-	<footer id="wb-info" class=" wb-navcurr-inited"> <!-- This area role is footer and bottom, footer is just one, so no need the aria-lable , so it need put the footer tag instead div -->
+	<footer id="wb-info" class=" wb-navcurr-inited"> <!-- [Hye Ran Yoo - 14] This area role is footer and bottom, footer is just one, so no need the aria-lable , so it need put the footer tag instead div -->
 		<div class="gc-sub-footer">
 			<div class="container d-flex align-items-center">
-				<nav aria-label="information and policy"> <!-- This area is link collection related to footer landmark. It is changed div to nav. -->
+				<nav aria-label="information and policy"> <!-- [Hye Ran Yoo - 15] This area is link collection related to footer landmark. It is changed div to nav. -->
 					<h3 class="wb-inv" id="aboutWebApp">Hi/Max Real Estate</h3>
 					<ul>
 						<li><a href="#">About the company</a></li>
 						<li><a href="#">Privacy policy</a></li>
 						<li><a href="#">Accessibility statement</a></li>
 						<li style="list-style: none;" class="social">
-						<a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" role="img" aria-label="Twitter"><!--svg tag need exact image's meaning, so I put the aria-lable attribute. In this svg, it play role as img, so I put addition role attribute. -->
+						<a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" role="img" aria-label="Twitter"><!-- [Hye Ran Yoo - 16] svg tag need exact image's meaning, so I put the aria-lable attribute. In this svg, it play role as img, so I put addition role attribute. -->
 						  <path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z"></path>
 						</svg></a></li>
 						
